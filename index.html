@@ -1,0 +1,1960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="Animations.css">
+    <link rel="stylesheet" href="section.css">
+    <link rel="stylesheet" href="ai.css">
+    
+    <title>Travel Agency</title>
+</head>
+<body>
+    
+
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="img/airplane_bg.mov" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+    <header>
+        <nav>
+            <h4>CBSE Skill_Expo</h4>
+            <ul>
+                <li><a href="#">Home <i class="bi bi-house"></i></a></li>
+                <li><a href="#">Community<i class="bi bi-globe"></i></a>
+                    <ul class="dropdown-menu">
+                      <li><a href=""><i class="bi bi-envelope"></i>Gmail<i class="bi bi-arrow-right"></i>info@dpsgaya.com</a></li>
+                      <li><a href="https://www.facebook.com/delhiPublicSchoolGaya/"class="btn-register"><i class="bi bi-facebook"></i>Facebook</a></li>
+                      <li><a href="#"><i class="bi bi-twitter-x"></i></a></li>
+                      <li><a href="#"><i class="bi bi-whatsapp"></i>Watsapp</a></li>
+                      <li><a href="#"><i class="bi bi-youtube"></i>Youtube</a></li>
+                    </ul>
+                </li>
+                <li><a href="https://www.irctctourism.com/"><i class="bi bi-bookmarks-fill"></i></i>Bookings</a></li>
+                <li><a href="https://www.dpsgaya.com/">About Us<i class="bi bi-file-person"></i></a></li>
+                <li><a href="javascript:void(0)" onclick="openRegister(event)"class="btn-register">Register</a></li>
+
+                <div id="registerContainer" style="display:none;
+                    position:fixed; top:0; left:0; width:100%; height:100vh;
+                    background:rgba(0,0,0,0.6); z-index:9999;">
+                
+                  <div style="position:relative; width:500px; max-width:95%; height:90vh; margin:auto; top:5%; background:white; border-radius:10px; overflow:hidden;">
+                    <iframe src="register.html" style="width:100%; height:100%; border:none;"></iframe>
+                    <button onclick="closeRegister()" style="position:absolute; top:10px; right:10px; background:red; color:white; border:none; padding:5px 10px; border-radius:5px; cursor:pointer;">X</button>
+                  </div>
+                
+                </div>
+
+
+            </ul>
+            <i class="bi bi-three-dots"></i>
+        </nav>
+        <div class="content">
+            <div class="cont_bx" id="top-banner">
+                <h2 class= "typing-heading">Where History Meets Nature Your Journey Begins Here</h2>
+                <p>Explore the heritage, culture, and natural beauty of Bihar in one unforgettable journey</p>
+            </div>
+            <div class="trip_bx">
+                <div class="search_bx">
+                    <div class="card">
+                        <h4>Location <i class="bi bi-caret-down-fill"></i></h4>
+                        <input type="text" id="search-destination" placeholder="Enter Your Destination">
+                    </div>
+                    <div class="card">
+                        
+                    </div>
+                    <div class="card">
+                        
+                    </div>
+                    <button id="explore-btn" type="button">SearchNow <i class="bi bi-search"></i></button>
+                </div>
+                <div class="travel_bx">
+                    <h4>Cateogries</h4>
+                    <div class="cards">
+                        <div class="card">
+                            <h3>Temple</h3>
+                            <img src="img/Mahabodhi1.jpg" alt="">
+                            <div class="btn_city">
+                                <a href="#temples">See More</a>
+                                <h5>Mahabodhi Temple <br> <span>$500</span></h5>
+                            </div>
+                        </div>
+                            <div class="card">
+                            <h3>Historical Places</h3>
+                            <img src="img/Sher Shah Suri Tomb.jpg" alt="">
+                            <div class="btn_city">
+                                <a href="#history">See More</a>
+                                <h5>Sher Shah Suri Tomb<br> <span>$250</span></h5>
+                            </div>
+                        </div>
+                            <div class="card">
+                            <h3>Hills</h3>
+                            <img src="img/rajgir_hills.jpeg" alt="">
+                            <div class="btn_city">
+                                <a href="#hills">See More</a>
+                                <h5>Rajgir Hills<br> <span>$300</span></h5>
+                            </div>
+                        </div>
+                            <div class="card">
+                            <h3>Water Falls</h3>
+                            <img src="img/Kakolat Waterfall.jpg" alt="">
+                            <div class="btn_city">
+                                <a href="#falls">See More</a>
+                                <h5>Kakolat Waterfall<br> <span>$150</span></h5>
+                            </div>
+                        </div>
+                          </div>
+                        </div>
+                    </div>
+                 
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="sections">
+        
+    
+    <!-- =================== MAHABODHI TEMPLE SECTION =================== -->
+     <section id="temples"></section>
+    <section id="mahabodhi-temple">
+      <h3 class="section-heading">Mahabodhi Temple</h3>
+    
+      <!-- Flex wrapper: left card + right info -->
+      <div class="temple-flex-wrapper">
+        <!-- Left: Temple card -->
+        <div class="temple_bx">
+          <img src="img/Mahabodhi1.jpg" alt="">
+          <div class="btn_temple">
+            <button class="read-more-btn" onclick="toggleDropdown('mahabodhi-info')">
+              Read More <i class="bi bi-hand-index"></i><br><i class="bi bi-chat-fill"></i>95.8M   <i class="bi bi-heart-fill"></i>80.9M
+            </button><div class="temple-rating">
+                       <!-- Stars -->
+                       <div class="stars">
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-half"></i> 
+                       </div>
+                       
+                       <!-- Textual rating -->
+                       <div class="rating-text">4.7</div>
+                    </div>
+            <h5>Mahabodhi Temple <br>
+              <span><i class="bi bi-wallet2"></i>$500</span>
+            </h5>
+          </div>
+        </div>
+    
+        <!-- Right: Info + Gallery -->
+        <div class="mahabodhi-right-info">
+          <h3>About Mahabodhi Temple</h3>
+          <p>
+            The Mahabodhi Temple (Bodh Gaya, Bihar) is the place where Lord Buddha attained enlightenment. 
+            It is a UNESCO World Heritage Site and a major pilgrimage center for Buddhists.
+          </p>
+          <div class="mahabodhi-gallery-table">
+            <table>
+              <tr>
+                <td><img src="img/Mahabodhi2.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+                <td><img src="img/Mahabodhi3.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+              </tr>
+              <tr>
+                <td><img src="img/Buddha1.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+                <td><img src="img/Buddha3.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div><!-- 🔚 temple-flex-wrapper ends -->
+    
+      <!-- 🔽 Hidden dropdown (appears below) -->
+      <div id="mahabodhi-info" class="temple-dropdown">
+         <div class="temple-history">
+           <h3>About</h3>
+           <p>The Mahabodhi Temple in Bodh Gaya, Bihar, is a UNESCO World Heritage Site marking the place where Lord Buddha attained enlightenment under the Bodhi tree. Originally built by Emperor Ashoka in the 3rd century BCE, the present structure dates back to the 5th–6th century CE. It is a sacred destination for millions of pilgrims and travelers worldwide. Nearby, visitors can also explore the Bodhi Tree, Thai Monastery, Great Buddha Statue, Indosan Nippon Japanese Temple, and Muchalinda Lake, making Bodh Gaya a hub of spirituality and culture.</p>
+         </div>
+     
+         <div class="temple-map">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.901219024368!2d84.99141929999999!3d24.6959222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32c5b4bd80877%3A0xf8dd2e286fa80c97!2sMahabodhi%20Temple!5e0!3m2!1sen!2sin!4v1758016036263!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
+         </div>
+     
+         <!-- Bottom: QR + Wiki -->
+         <div class="temple-extra">
+           <img src="img/QR_Mahabodhi.jpg" 
+                alt="QR to Wiki">
+           <a href="https://en.wikipedia.org/wiki/Mahabodhi_Temple" target="_blank" class="wiki-btn">
+             Go to Wikipedia <i class="bi bi-hand-index"></i>
+           </a>
+         </div>
+
+             <!-- Right: Transport Info -->
+            <div class="temple-transport">
+              <!-- Bus Stand -->
+              <div class="transport-card">
+                <h4>Nearest Bus Stand</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.8837043170433!2d84.98527099678952!3d24.69652420000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32c5c839fae1b%3A0x421cf4f7973c15bd!2sMain%20Temple%20Stop!5e0!3m2!1sen!2sin!4v1758022557444!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-bus-front"></i>
+                  <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Railway Station -->
+              <div class="transport-card">
+                <h4>Nearest Railway Station</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.766933146537!2d84.99679237538967!3d24.803433047537094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b90ee8bbd6b%3A0x3e4d186eb90e35cc!2sGaya%20Railway%20station!5e0!3m2!1sen!2sin!4v1758024141788!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-train-front"></i>
+                  <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Airport -->
+              <div class="transport-card">
+                <h4>Nearest Airport</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14493.442458227364!2d84.92467778715823!3d24.748821999999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b48bdca90af%3A0xc9139ea43080cb80!2sGaya%20International%20Airport!5e0!3m2!1sen!2sin!4v1758024175609!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-airplane"></i>
+                  <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+                </div>
+              </div>
+
+              <div class="hotel-card">
+                <h4>Best Nearest Hotel Near</h4>
+                
+                  <!-- Dropdown menu -->
+                  <select onchange="updateHotelMap(this)">
+                    <option value="">-------------------------------- Select Location ----------------------------</option>
+                    <option value="mahabodhi">Mahabodhi Temple</option>
+                    <option value="bus">Bus Stand🚌</option>
+                    <option value="rail">Railway Station🚄</option>
+                    <option value="airport">Airport🛬</option>
+                  </select>
+                
+                  <!-- One single map -->
+                  <iframe class="hotel-map"
+                          src=""
+                          width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+                  <!-- Dynamic Button -->
+                  <div class="hotel-btn">
+                    <a href="#" target="_blank">View More</a>
+                  </div>
+              </div>
+                
+            </div>
+        </div>
+    
+    </section>
+
+
+
+    <!-- =================== Vishnu Pad TEMPLE SECTION =================== -->
+    <section id="vishnupad-temple">
+      <h3 class="section-heading">Vishnu Pad Temple</h3>
+    
+      <!-- Flex wrapper: left card + right info -->
+      <div class="temple-flex-wrapper">
+        <!-- Left: Temple card -->
+        <div class="temple_bx">
+          <img src="img/VishnuPad Temple .jpg" alt="">
+          <div class="btn_temple">
+            <button class="read-more-btn" onclick="toggleDropdown('vishnupad-temple-info')">
+              Read More <i class="bi bi-hand-index"></i><br><i class="bi bi-chat-fill"></i>50.4M   <i class="bi bi-heart-fill"></i>39.7M
+            </button><div class="temple-rating">
+                       <!-- Stars -->
+                       <div class="stars">
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-half"></i> 
+                       </div>
+                       
+                       <!-- Textual rating -->
+                       <div class="rating-text">4.6</div>
+                    </div>
+            <h5>Vishnu Pad Temple <br>
+              <span><i class="bi bi-wallet2"></i>$300</span>
+            </h5>
+          </div>
+        </div>
+    
+        <!-- Right: Info + Gallery -->
+        <div class="mahabodhi-right-info">
+          <h3>About Vishnu Pad Temple</h3>
+          <p>
+            Vishnupad Temple in Gaya is a historic Hindu temple known for Lord Vishnu's 40 cm footprint etched in stone. Built of gray granite with a   100-foot tall tower, it is a major pilgrimage site for ancestral rites.
+          </p>
+          <div class="mahabodhi-gallery-table">
+            <table>
+              <tr>
+                <td><img src="img/VISHNUPAD1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+                <td><img src="img/VISHNUPAD2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+              </tr>
+              <tr>
+                <td><img src="img/Vishnupad3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+                <td><img src="img/VISHNUPAD4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div><!-- 🔚 temple-flex-wrapper ends -->
+    
+      <!-- 🔽 Hidden dropdown (appears below) -->
+      <div id="vishnupad-temple-info" class="temple-dropdown">
+         <div class="temple-history">
+           <h3>About</h3>
+           <p>Vishnupad Temple, located in Gaya, Bihar, is a revered Hindu shrine dedicated to Lord Vishnu, famous for the sacred footprint of the deity embedded in stone inside the sanctum. Built in the 18th century with beautiful stone architecture, the temple attracts thousands of devotees, especially during the annual Shraddh ceremonies. Visitors can also explore nearby attractions such as Mangla Gauri Temple, the sacred Falgu River, Gaya Vishnupad Tank, and local dharamshalas, making it a significant spiritual and cultural destination.</p>
+         </div>
+     
+         <div class="temple-map">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.526815537706!2d85.00668037558393!3d24.77740804857543!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b956601d2c3%3A0x87018dc46f7c53de!2sShri%20Vishnupad%20Temple%2C%20Gaya%20Ji!5e0!3m2!1sen!2sin!4v1758075712827!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+ 
+         </div>
+     
+         <!-- Bottom: QR + Wiki -->
+         <div class="temple-extra">
+           <img src="img/QR_Vishnu Pad Temple.jpg" 
+                alt="QR to Wiki">
+           <a href="https://en.wikipedia.org/wiki/Vishnupad_Temple" target="_blank" class="wiki-btn">
+             Go to Wikipedia <i class="bi bi-hand-index"></i>
+           </a>
+         </div>
+
+             <!-- Right: Transport Info -->
+            <div class="temple-transport">
+              <!-- Bus Stand -->
+              <div class="transport-card">
+                <h4>Nearest Bus Stand</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14490.153144435548!2d84.95730988715822!3d24.777015000000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32afc17856a3f%3A0x606522d9c80f4dd7!2sBus%20Stand%2C%20Sikariya%20More!5e0!3m2!1sen!2sin!4v1758075841282!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-bus-front"></i>
+                  <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Railway Station -->
+              <div class="transport-card">
+                <h4>Nearest Railway Station</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.766933146537!2d84.99679237538967!3d24.803433047537094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b90ee8bbd6b%3A0x3e4d186eb90e35cc!2sGaya%20Railway%20station!5e0!3m2!1sen!2sin!4v1758024141788!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-train-front"></i>
+                  <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Airport -->
+              <div class="transport-card">
+                <h4>Nearest Airport</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14493.442458227364!2d84.92467778715823!3d24.748821999999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b48bdca90af%3A0xc9139ea43080cb80!2sGaya%20International%20Airport!5e0!3m2!1sen!2sin!4v1758024175609!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-airplane"></i>
+                  <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+                </div>
+              </div>
+
+
+              <div class="hotel-card">
+                <h4>Best Nearest Hotel Near</h4>
+                
+                  <!-- Dropdown menu -->
+                  <select onchange="updateHotelMap(this)">
+                    <option value="">-------------------------------- Select Location ----------------------------</option>
+                    <option value="vishnupad">Vishnu Pad Temple</option>
+                    <option value="bus">Bus Stand🚌</option>
+                    <option value="rail">Railway Station🚄</option>
+                    <option value="airport">Airport🛬</option>
+                  </select>
+                
+                  <!-- One single map -->
+                  <iframe class="hotel-map"
+                          src=""
+                          width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+                  <!-- Dynamic Button -->
+                  <div class="hotel-btn">
+                    <a href="#" target="_blank">View More</a>
+                  </div>
+              </div>
+
+
+            </div>
+        </div>
+    
+    </section>
+
+
+
+    <!-- =================== Mangla Gauri TEMPLE SECTION =================== -->
+    <section id="mangla-gauri-temple">
+      <h3 class="section-heading">Mangla Gauri Temple</h3>
+    
+      <!-- Flex wrapper: left card + right info -->
+      <div class="temple-flex-wrapper">
+        <!-- Left: Temple card -->
+        <div class="temple_bx">
+          <img src="img/Mnagla Gauri Temple.jpg" alt="">
+          <div class="btn_temple">
+            <button class="read-more-btn" onclick="toggleDropdown('manglagauri-temple-info')">
+              Read More <i class="bi bi-hand-index"></i><br><i class="bi bi-chat-fill"></i>30.42M   <i class="bi bi-heart-fill"></i>21.29M
+            </button><div class="temple-rating">
+                       <!-- Stars -->
+                       <div class="stars">
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-half"></i> 
+                       </div>
+                       
+                       <!-- Textual rating -->
+                       <div class="rating-text">4.6</div>
+                    </div>
+            <h5>Mangla Gauri Temple <br>
+              <span><i class="bi bi-wallet2"></i>$200</span>
+            </h5>
+          </div>
+        </div>
+    
+        <!-- Right: Info + Gallery -->
+        <div class="mahabodhi-right-info">
+          <h3>About Mangla Gauri Temple</h3>
+          <p>
+            Mangla Gauri Temple in Gaya is a 15th-century Maha Shaktipeeth dedicated to Goddess Sati, symbolizing nourishment. It sits atop   Mangalagauri Hill and is a key pilgrimage spot known for blessings to devotees.
+          </p>
+          <div class="mahabodhi-gallery-table">
+            <table>
+              <tr>
+                <td><img src="img/Mnagla Gauri Temple1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+                <td><img src="img/Mnagla Gauri Temple2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+              </tr>
+              <tr>
+                <td><img src="img/Mnagla Gauri Temple3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+                <td><img src="img/Mnagla Gauri Temple4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div><!-- 🔚 temple-flex-wrapper ends -->
+    
+      <!-- 🔽 Hidden dropdown (appears below) -->
+      <div id="manglagauri-temple-info" class="temple-dropdown">
+         <div class="temple-history">
+           <h3>About</h3>
+           <p>Mangla Gauri Temple, situated on a hilltop in Gaya, Bihar, is one of the oldest and most revered shrines dedicated to Goddess Parvati. Known for its stunning architecture and panoramic views of the surrounding landscape, the temple attracts devotees seeking blessings for prosperity and marital happiness. Nearby, visitors can also explore Vishnupad Temple, the sacred Falgu River, Gaya Vishnupad Tank, and local dharamshalas, making the area a significant spiritual and cultural hub.</p>
+         </div>
+     
+         <div class="temple-map">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3622.5982191870758!2d84.99993587558387!3d24.774961248673076!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32a355fb925b9%3A0x7e5d29cf476342e3!2sMaa%20Sarva%20Mangla%20Gauri%20Shakti%20Peeth%20Temple!5e0!3m2!1sen!2sin!4v1758076549136!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+     
+         <!-- Bottom: QR + Wiki -->
+         <div class="temple-extra">
+           <img src="img/QR_Mangla.jpg" 
+                alt="QR to Wiki">
+           <a href="https://en.wikipedia.org/wiki/Mangla_Gauri_Temple" target="_blank" class="wiki-btn">
+             Go to Wikipedia <i class="bi bi-hand-index"></i>
+           </a>
+         </div>
+
+             <!-- Right: Transport Info -->
+            <div class="temple-transport">
+              <!-- Bus Stand -->
+              <div class="transport-card">
+                <h4>Nearest Bus Stand</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14490.153144435548!2d84.95730988715822!3d24.777015000000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32afc17856a3f%3A0x606522d9c80f4dd7!2sBus%20Stand%2C%20Sikariya%20More!5e0!3m2!1sen!2sin!4v1758075841282!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-bus-front"></i>
+                  <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Railway Station -->
+              <div class="transport-card">
+                <h4>Nearest Railway Station</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.766933146537!2d84.99679237538967!3d24.803433047537094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b90ee8bbd6b%3A0x3e4d186eb90e35cc!2sGaya%20Railway%20station!5e0!3m2!1sen!2sin!4v1758024141788!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-train-front"></i>
+                  <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Airport -->
+              <div class="transport-card">
+                <h4>Nearest Airport</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14493.442458227364!2d84.92467778715823!3d24.748821999999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b48bdca90af%3A0xc9139ea43080cb80!2sGaya%20International%20Airport!5e0!3m2!1sen!2sin!4v1758024175609!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-airplane"></i>
+                  <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+                </div>
+              </div>
+
+
+              <div class="hotel-card">
+                <h4>Best Nearest Hotel Near</h4>
+                
+                  <!-- Dropdown menu -->
+                  <select onchange="updateHotelMap(this)">
+                    <option value="">-------------------------------- Select Location ----------------------------</option>
+                    <option value="mangla">Mangla Gauri Temple</option>
+                    <option value="bus">Bus Stand🚌</option>
+                    <option value="rail">Railway Station🚄</option>
+                    <option value="airport">Airport🛬</option>
+                  </select>
+                
+                  <!-- One single map -->
+                  <iframe class="hotel-map"
+                          src=""
+                          width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+                  <!-- Dynamic Button -->
+                  <div class="hotel-btn">
+                    <a href="#" target="_blank">View More</a>
+                  </div>
+              </div>
+
+
+
+            </div>
+        </div>
+    
+    </section>
+
+
+
+
+    <!-- =================== Sher Shah Suri Tomb SECTION =================== -->
+     <section id="history"></section>
+    <section id="sher-shah-suri-tomb">
+      <h3 class="section-heading">Sher Shah Suri Tomb</h3>
+    
+      <!-- Flex wrapper: left card + right info -->
+      <div class="temple-flex-wrapper">
+        <!-- Left: Temple card -->
+        <div class="temple_bx">
+          <img src="img/Sher Shah Suri Tomb.jpg" alt="">
+          <div class="btn_temple">
+            <button class="read-more-btn" onclick="toggleDropdown('sher-shah-suri-tomb-info')">
+              Read More <i class="bi bi-hand-index"></i><br><i class="bi bi-chat-fill"></i>40.18M   <i class="bi bi-heart-fill"></i>37.56M
+            </button><div class="temple-rating">
+                       <!-- Stars -->
+                       <div class="stars">
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-half"></i> 
+                       </div>
+                       
+                       <!-- Textual rating -->
+                       <div class="rating-text">4.3</div>
+                    </div>
+            <h5>Sher Shah Suri Tomb <br>
+              <span><i class="bi bi-wallet2"></i>$250</span>
+            </h5>
+          </div>
+        </div>
+    
+        <!-- Right: Info + Gallery -->
+        <div class="mahabodhi-right-info">
+          <h3>About Sher Shah Suri Tomb</h3>
+          <p>
+            Sher Shah Suri Tomb in Sasaram, Bihar, is a 16th-century red sandstone mausoleum with Indo-Islamic architecture. It stands in the middle    of an artificial lake, has a large dome, and four corner minarets. Known as the "second Taj Mahal," it honors Sher Shah Suri, founder of    the Sur Empire.
+          </p>
+          <div class="mahabodhi-gallery-table">
+            <table>
+              <tr>
+                <td><img src="img/Sher Shah Suri Tomb1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+                <td><img src="img/Sher Shah Suri Tomb2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+              </tr>
+              <tr>
+                <td><img src="img/Sher Shah Suri Tomb3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+                <td><img src="img/Sher Shah Suri Tomb4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div><!-- 🔚 temple-flex-wrapper ends -->
+    
+      <!-- 🔽 Hidden dropdown (appears below) -->
+      <div id="sher-shah-suri-tomb-info" class="temple-dropdown">
+         <div class="temple-history">
+           <h3>About</h3>
+           <p>Sher Shah Suri Tomb, located in Sasaram, Bihar, is an architectural masterpiece built in the 16th century to honor the great Afghan ruler Sher Shah Suri. This grand tomb, made entirely of red sandstone, is known for its impressive dome, intricate carvings, and symmetrical gardens, reflecting Indo-Islamic architectural brilliance. Nearby, visitors can also explore Rohtasgarh Fort, Shershah Suri Fort, and the Tomb of Khawas Khan, making Sasaram a rich historical and cultural destination.</p>
+         </div>
+     
+         <div class="temple-map">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.5334015422163!2d84.00664917558834!3d24.947960541750216!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398db7364e40738f%3A0x562b5ceb257e5d56!2sSher%20Shah%20Suri%20Tomb!5e0!3m2!1sen!2sin!4v1758077735916!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+     
+         <!-- Bottom: QR + Wiki -->
+         <div class="temple-extra">
+           <img src="img/QR_Sher.jpg" 
+                alt="QR to Wiki">
+           <a href="https://en.wikipedia.org/wiki/Tomb_of_Sher_Shah_Suri" target="_blank" class="wiki-btn">
+             Go to Wikipedia <i class="bi bi-hand-index"></i>
+           </a>
+         </div>
+
+             <!-- Right: Transport Info -->
+            <div class="temple-transport">
+              <!-- Bus Stand -->
+              <div class="transport-card">
+                <h4>Nearest Bus Stand</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.4787796794276!2d84.00774997558842!3d24.949820141675595!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398db79810bb5c65%3A0x165e717dc0544ef9!2sSher%20Shah%20Tomb%20Bus%20Parking!5e0!3m2!1sen!2sin!4v1758414494423!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-bus-front"></i>
+                  <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Railway Station -->
+              <div class="transport-card">
+                <h4>Nearest Railway Station</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115760.86881700814!2d83.92682276760507!3d24.948173363824615!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398db0b4784c7fe3%3A0x478ff2e80eaf77a7!2sSasaram%20Junction!5e0!3m2!1sen!2sin!4v1758077875970!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-train-front"></i>
+                  <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Airport -->
+              <div class="transport-card">
+                <h4>Nearest Airport</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57891.12639864214!2d84.05357924863281!3d24.92541249999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398daf87d3bbb189%3A0x61a494e49b5c7ff2!2sSasaram%20Airstrip!5e0!3m2!1sen!2sin!4v1758077975348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-airplane"></i>
+                  <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+                </div>
+              </div>
+
+
+              <div class="hotel-card">
+                <h4>Best Nearest Hotel Near</h4>
+                
+                  <!-- Dropdown menu -->
+                  <select onchange="updateHotelMap(this)">
+                    <option value="">-------------------------------- Select Location ----------------------------</option>
+                    <option value="sher">Sher Shah Suri Tomb</option>
+                    <option value="bus-sher">Bus Stand🚌</option>
+                    <option value="rail-sher">Railway Station🚄</option>
+                    <option value="airport-sher">Airport🛬</option>
+                  </select>
+                
+                  <!-- One single map -->
+                  <iframe class="hotel-map"
+                          src=""
+                          width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+                  <!-- Dynamic Button -->
+                  <div class="hotel-btn">
+                    <a href="#" target="_blank">View More</a>
+                  </div>
+              </div>
+
+
+            </div>
+        </div>
+    
+    </section>
+
+
+
+
+    <!-- =================== Golghar SECTION =================== -->
+     <section id="history"></section>
+    <section id="golghar">
+      <h3 class="section-heading">Golghar</h3>
+    
+      <!-- Flex wrapper: left card + right info -->
+      <div class="temple-flex-wrapper">
+        <!-- Left: Temple card -->
+        <div class="temple_bx">
+          <img src="img/Golghar.jpg" alt="">
+          <div class="btn_temple">
+            <button class="read-more-btn" onclick="toggleDropdown('golghar-info')">
+              Read More <i class="bi bi-hand-index"></i><br><i class="bi bi-chat-fill"></i>25.28M   <i class="bi bi-heart-fill"></i>10.24M
+            </button><div class="temple-rating">
+                       <!-- Stars -->
+                       <div class="stars">
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star"></i> 
+                       </div>
+                       
+                       <!-- Textual rating -->
+                       <div class="rating-text">4.2</div>
+                    </div>
+            <h5>Golghar<br>
+              <span><i class="bi bi-wallet2"></i>$310</span>
+            </h5>
+          </div>
+        </div>
+    
+        <!-- Right: Info + Gallery -->
+        <div class="mahabodhi-right-info">
+          <h3>About Golghar</h3>
+          <p>
+            Golghar is a large, beehive-shaped granary in Patna, Bihar, built in 1786 by the British after a famine. Made of brick and 29 meters high, it features a spiral staircase and offers panoramic views of the city               
+          </p>
+          <div class="mahabodhi-gallery-table">
+            <table>
+              <tr>
+                <td><img src="img/Golghar1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+                <td><img src="img/Golghar2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+              </tr>
+              <tr>
+                <td><img src="img/Golghar3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+                <td><img src="img/Golghar4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div><!-- 🔚 temple-flex-wrapper ends -->
+    
+      <!-- 🔽 Hidden dropdown (appears below) -->
+      <div id="golghar-info" class="temple-dropdown">
+         <div class="temple-history">
+           <h3>About</h3>
+           <p>Golghar, located in Patna, Bihar, is a massive granary built by Captain John Garstin in 1786 to store grains during famines. Its unique beehive-shaped architecture and spiral staircase leading to the top offer panoramic views of the Ganga River and the city of Patna. Visitors can also explore nearby attractions such as Gandhi Maidan, Patna Museum, Gandhi Ghat, and the historic Takht Sri Patna Sahib Gurudwara, making it a must-visit spot for history lovers and travelers alike.</p>
+         </div>
+     
+         <div class="temple-map">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3597.5356544441124!2d85.13687307560598!3d25.620341814431416!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58504978e8f3%3A0x18cd15ae7d0e6cd!2sGolghar!5e0!3m2!1sen!2sin!4v1758267767898!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+     
+         <!-- Bottom: QR + Wiki -->
+         <div class="temple-extra">
+           <img src="img/QR_Golghar.jpg" 
+                alt="QR to Wiki">
+           <a href="https://en.wikipedia.org/wiki/Golghar" target="_blank" class="wiki-btn">
+             Go to Wikipedia <i class="bi bi-hand-index"></i>
+           </a>
+         </div>
+
+             <!-- Right: Transport Info -->
+            <div class="temple-transport">
+              <!-- Bus Stand -->
+              <div class="transport-card">
+                <h4>Nearest Bus Stand</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57002.31225342899!2d83.30503463745117!3d26.7557178821716!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3991448a3670fce1%3A0x93e3d6af5c6afdb3!2sGorakhpur%20Busstand!5e0!3m2!1sen!2sin!4v1758273155464!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-bus-front"></i>
+                  <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Railway Station -->
+              <div class="transport-card">
+                <h4>Nearest Railway Station</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57560.51535297552!2d85.09824830807392!3d25.6204562211398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed58688297a6f3%3A0x7b2558c82fd5ff4b!2sPatna%20Junction%20railway%20station!5e0!3m2!1sen!2sin!4v1758267878714!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-train-front"></i>
+                  <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Airport -->
+              <div class="transport-card">
+                <h4>Nearest Airport</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d115145.8888270434!2d85.00035852670528!3d25.594645599999993!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ed57e7d0a13555%3A0x901d32ef90f07d5!2sJay%20Prakash%20Narayan%20International%20Airport!5e0!3m2!1sen!2sin!4v1758267939584!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-airplane"></i>
+                  <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+                </div>
+              </div>
+
+
+              <div class="hotel-card">
+                <h4>Best Nearest Hotel Near</h4>
+                
+                  <!-- Dropdown menu -->
+                  <select onchange="updateHotelMap(this)">
+                    <option value="">-------------------------------- Select Location ----------------------------</option>
+                    <option value="gol">Golghar</option>
+                    <option value="bus-gol">Bus Stand🚌</option>
+                    <option value="rail-gol">Railway Station🚄</option>
+                    <option value="airport-gol">Airport🛬</option>
+                  </select>
+                
+                  <!-- One single map -->
+                  <iframe class="hotel-map"
+                          src=""
+                          width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+                  <!-- Dynamic Button -->
+                  <div class="hotel-btn">
+                    <a href="#" target="_blank">View More</a>
+                  </div>
+              </div>
+
+
+
+            </div>
+        </div>
+    
+    </section>
+
+
+
+
+    <!-- =================== Kesariya Stupa SECTION =================== -->
+     <section id="history"></section>
+    <section id="kesariya-stupa">
+      <h3 class="section-heading">Kesariya Stupa</h3>
+    
+      <!-- Flex wrapper: left card + right info -->
+      <div class="temple-flex-wrapper">
+        <!-- Left: Temple card -->
+        <div class="temple_bx">
+          <img src="img/Kesariya Stupa .jpg" alt="">
+          <div class="btn_temple">
+            <button class="read-more-btn" onclick="toggleDropdown('kesariya-stupa-info')">
+              Read More <i class="bi bi-hand-index"></i><br><i class="bi bi-chat-fill"></i>45.68M   <i class="bi bi-heart-fill"></i>31.36M
+            </button><div class="temple-rating">
+                       <!-- Stars -->
+                       <div class="stars">
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-fill"></i>
+                         <i class="bi bi-star-half"></i> 
+                       </div>
+                       
+                       <!-- Textual rating -->
+                       <div class="rating-text">4.3</div>
+                    </div>
+            <h5>Kesariya Stupa<br>
+              <span><i class="bi bi-wallet2"></i>$310</span>
+            </h5>
+          </div>
+        </div>
+    
+        <!-- Right: Info + Gallery -->
+        <div class="mahabodhi-right-info">
+          <h3>About Kesariya Stupa</h3>
+          <p>
+            Kesariya Stupa in Bihar is the world's tallest Buddhist stupa (104 ft), built in the 3rd century BCE, where Buddha gave his alms bowl to the Licchavis before his final journey.
+          <div class="mahabodhi-gallery-table">
+            <table>
+              <tr>
+                <td><img src="img/Kesariya Stupa1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+                <td><img src="img/Kesariya Stupa2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+              </tr>
+              <tr>
+                <td><img src="img/Kesariya Stupa3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+                <td><img src="img/Kesariya Stupa4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+              </tr>
+            </table>
+          </div>
+        </div>
+      </div><!-- 🔚 temple-flex-wrapper ends -->
+    
+      <!-- 🔽 Hidden dropdown (appears below) -->
+      <div id="kesariya-stupa-info" class="temple-dropdown">
+         <div class="temple-history">
+           <h3>About</h3>
+           <p>Kesariya Stupa, located in East Champaran, Bihar, is one of the tallest and largest Buddhist stupas in the world, standing at nearly 104 feet. Built during the Maurya and Gupta periods, it marks the place where Lord Buddha gave his final sermon before attaining Mahaparinirvana. The stupa’s grand structure and historical significance make it a major pilgrimage site for Buddhists. Visitors can also explore nearby attractions such as Vaishali, Someshwar Nath Temple, and the Ashokan Pillar, adding both spiritual and historical depth to the journey.</p>
+         </div>
+     
+         <div class="temple-map">
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3575.7626157651216!2d84.85225647562535!3d26.334185184712723!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399329f8dc0cc10b%3A0x259396406c2d4427!2sKesariya%20Buddha%20Stupa!5e0!3m2!1sen!2sin!4v1758269368018!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </div>
+     
+         <!-- Bottom: QR + Wiki -->
+         <div class="temple-extra">
+           <img src="img/QR_Kesariya.jpg" 
+                alt="QR to Wiki">
+           <a href="https://en.wikipedia.org/wiki/Kesaria_Stupa" target="_blank" class="wiki-btn">
+             Go to Wikipedia <i class="bi bi-hand-index"></i>
+           </a>
+         </div>
+
+            <div class="temple-transport">
+              <!-- Bus Stand -->
+              <div class="transport-card">
+                <h4>Nearest Bus Stand</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5056.043188646943!2d84.86683026084734!3d26.353608035469907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39932a3daff80803%3A0xc2ff83397f4f3aa6!2sThana%20Chowk%20Bus%20Stop!5e0!3m2!1sen!2sin!4v1758269448631!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-bus-front"></i>
+                  <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Railway Station -->
+              <div class="transport-card">
+                <h4>Nearest Railway Station</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228889.8444718763!2d84.38998269453123!3d26.313420399999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3992d056eb78bd17%3A0xd0ed6e118f71e337!2sRajapatti!5e0!3m2!1sen!2sin!4v1758269764698!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-train-front"></i>
+                  <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+                </div>
+              </div>
+    
+              <!-- Airport -->
+              <div class="transport-card">
+                <h4>Nearest Airport</h4>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d457448.19580746244!2d83.6840607890625!3d26.39719520000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3993011b06d3cd0d%3A0x794ea7cbf711b99!2sSabeya%20Airport!5e0!3m2!1sen!2sin!4v1758269862989!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="transport-link">
+                  <i class="bi bi-airplane"></i>
+                  <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+                </div>
+              </div>
+
+              <div class="hotel-card">
+                <h4>Best Nearest Hotel Near</h4>
+                
+                  <!-- Dropdown menu -->
+                  <select onchange="updateHotelMap(this)">
+                    <option value="">-------------------------------- Select Location ----------------------------</option>
+                    <option value="kesariya">Kesariya Stupa</option>
+                    <option value="bus-kesariya">Bus Stand🚌</option>
+                    <option value="rail-kesariya">Railway Station🚄</option>
+                    <option value="airport-kesariya">Airport🛬</option>
+                  </select>
+            
+                  <iframe class="hotel-map"
+                          src=""
+                          width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+                  <!-- Dynamic Button -->
+                  <div class="hotel-btn">
+                    <a href="#" target="_blank">View More</a>
+                  </div>
+              </div>
+
+
+
+            </div>
+        </div>
+    
+    </section>
+
+
+   <!-- =================== Ruins Of Nalanda University SECTION =================== -->
+   <section id="ruins-of-nalanda-university">
+     <h3 class="section-heading">Ruins Of Nalanda University</h3>
+   
+     <!-- Flex wrapper -->
+     <div class="temple-flex-wrapper">
+   
+       <!-- Left: Temple card -->
+       <div class="temple_bx">
+         <img src="img/Nalanda University.jpg" alt="">
+         <div class="btn_temple">
+           <button class="read-more-btn" onclick="toggleDropdown('ruins-of-nalanda-university-info')">
+             Read More <i class="bi bi-hand-index"></i><br>
+             <i class="bi bi-chat-fill"></i>22.18M <i class="bi bi-heart-fill"></i>11.3M
+           </button>
+   
+           <!-- Rating -->
+           <div class="temple-rating">
+             <div class="stars">
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-half"></i>
+             </div>
+             <div class="rating-text">4.5</div>
+           </div>
+   
+           <h5>Ruins Of Nalanda University<br>
+             <span><i class="bi bi-wallet2"></i>$315</span>
+           </h5>
+         </div>
+       </div>
+   
+       <!-- Right: Info + Gallery -->
+       <div class="mahabodhi-right-info">
+         <h3>About Ruins Of Nalanda University</h3>
+         <p>
+           Nalanda University, founded in the 5th century CE in Bihar, was the world’s first residential university
+           and a major center for Buddhist learning. It thrived for nearly 700 years and is now a UNESCO World
+           Heritage Site.
+         </p>   
+         <div class="mahabodhi-gallery-table">
+           <table>
+             <tr>
+               <td><img src="img/Nalanda University1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+               <td><img src="img/Nalanda University2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+             </tr>
+             <tr>
+               <td><img src="img/Nalanda University3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+               <td><img src="img/Nalanda University4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+             </tr>
+           </table>
+         </div>
+   
+       </div>
+     </div><!-- 🔚 temple-flex-wrapper ends -->
+   
+     <!-- Hidden Dropdown -->
+     <div id="ruins-of-nalanda-university-info" class="temple-dropdown">
+       <div class="temple-history">
+         <h3>About</h3>
+         <p>
+         The ruins of Nalanda University, located in Nalanda, Bihar, showcase the remains of one of the world’s oldest residential universities, founded in the 5th century CE. Once a global center of learning, it attracted scholars from as far as China, Tibet, Korea, and Central Asia. The red-brick monasteries, temples, and ancient manuscripts reflect the glory of Buddhist education and architecture. Nearby, visitors can also explore the Nalanda Archaeological Museum, Hiuen Tsang Memorial Hall, Surya Mandir, and Rajgir, making it a must-visit destination for history and culture enthusiasts.         
+        </p>
+       </div>
+   
+       <!-- Map -->
+       <div class="temple-map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.4508604128187!2d85.3769507755902!3d25.01876903890438!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2e564bc00e413%3A0x5046ed92e53b0deb!2sNalanda%20University!5e0!3m2!1sen!2sin!4v1758419095214!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+         </iframe>
+       </div>
+   
+       <!-- QR + Wiki -->
+       <div class="temple-extra">
+         <img src="img/QR_Nalanda.jpg" alt="QR to Wiki">
+         <a href="https://en.wikipedia.org/wiki/Nalanda_mahavihara" target="_blank" class="wiki-btn">
+           Go to Wikipedia <i class="bi bi-hand-index"></i>
+         </a>
+       </div>
+   
+       <div class="temple-transport">
+          <!-- Bus Stand -->
+         <div class="transport-card">
+           <h4>Nearest Bus Stand</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28899.600436123732!2d85.4190525743164!3d25.120470999999995!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2f3d959fb3dc7%3A0xd36984f567a94b80!2sNalanda%20Bus%20Stand!5e0!3m2!1sen!2sin!4v1758419148873!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>           <div class="transport-link">
+             <i class="bi bi-bus-front"></i>
+             <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Railway Station -->
+         <div class="transport-card">
+           <h4>Nearest Railway Station</h4>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28899.050301230214!2d85.44261039430255!3d25.12279710197027!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2f220d58bba85%3A0xeef269aef2d34b66!2sNalanda!5e0!3m2!1sen!2sin!4v1758419292894!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-train-front"></i>
+             <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Airport -->
+         <div class="transport-card">
+           <h4>Nearest Helipad</h4>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28923.500259396576!2d85.34855707431642!3d25.01922160000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2e500496db473%3A0x51c745951dc6a436!2sHelipad%20(Nalanda%20University)!5e0!3m2!1sen!2sin!4v1758419381767!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-h-square-fill"></i>
+             <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+           </div>
+         </div>
+          
+         <div class="hotel-card">
+           <h4>Best Nearest Hotel Near</h4>
+             <!-- Dropdown menu -->
+             <select onchange="updateHotelMap(this)">
+               <option value="">-------------------------------- Select Location ----------------------------</option>
+               <option value="nalanda">Nalanda Stupa</option>
+               <option value="bus-nalanda">Bus Stand🚌</option>
+               <option value="rail-nalanda">Railway Station🚄</option>
+               <option value="airport-nalanda">Airport🛬</option>
+             </select>
+           
+             <!-- One single map -->
+             <iframe class="hotel-map"
+                     src=""
+                     width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+             <!-- Dynamic Button -->
+             <div class="hotel-btn">
+               <a href="#" target="_blank">View More</a>
+             </div>
+         </div>
+     </div>
+   </section>
+
+
+   <!-- =================== Sujata Stupa SECTION =================== -->
+   <section id="sujata-stupa">
+     <h3 class="section-heading">Sujata Stupa</h3>
+   
+     <!-- Flex wrapper -->
+     <div class="temple-flex-wrapper">
+   
+       <!-- Left: Temple card -->
+       <div class="temple_bx">
+         <img src="img/Sujata Stupa.jpg" alt="">
+         <div class="btn_temple">
+           <button class="read-more-btn" onclick="toggleDropdown('sujata-stupa-info')">
+             Read More <i class="bi bi-hand-index"></i><br>
+             <i class="bi bi-chat-fill"></i>1.4M <i class="bi bi-heart-fill"></i>900k
+           </button>
+   
+           <!-- Rating -->
+           <div class="temple-rating">
+             <div class="stars">
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-half"></i>
+             </div>
+             <div class="rating-text">4.5</div>
+           </div>
+   
+           <h5>Sujata Stupa<br>
+             <span><i class="bi bi-wallet2"></i>$315</span>
+           </h5>
+         </div>
+       </div>
+   
+       <!-- Right: Info + Gallery -->
+       <div class="mahabodhi-right-info">
+         <h3>About Sujata Stupa</h3>
+         <p>
+          Sujata Stupa in Bodh Gaya, Bihar, honors Sujata, the milkmaid who ended Buddha's seven-year fast by offering him milk and rice. Built in the 2nd century BCE, it symbolizes compassion and marks a key moment on Buddha's path to enlightenment.</p>
+         </p>   
+         <div class="mahabodhi-gallery-table">
+           <table>
+             <tr>
+               <td><img src="img/Sujata Stupa1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+               <td><img src="img/Sujata Stupa2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+             </tr>
+             <tr>
+               <td><img src="img/Sujata Stupa3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+               <td><img src="img/Sujata Stupa4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+             </tr>
+           </table>
+         </div>
+   
+       </div>
+     </div><!-- 🔚 temple-flex-wrapper ends -->
+   
+     <!-- Hidden Dropdown -->
+     <div id="sujata-stupa-info" class="temple-dropdown">
+       <div class="temple-history">
+         <h3>About</h3>
+         <p>
+         Sujata Stupa, located in Bodh Gaya, Bihar, is an ancient Buddhist monument built in memory of Sujata, the village woman who offered milk and rice to Gautama Buddha before his enlightenment. This act of compassion is believed to have played a vital role in Buddha’s spiritual journey, making the stupa a site of great reverence. Surrounded by peaceful fields and villages, visitors can also explore nearby attractions such as the Mahabodhi Temple, Bodhi Tree, Muchalinda Lake, and the Great Buddha Statue, making it an integral stop on the Buddhist pilgrimage circuit.       
+         </p>
+       </div>
+   
+       <!-- Map -->
+       <div class="temple-map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.8409530259655!2d85.00074787558191!3d24.697993551738907!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32c3bfcc98c89%3A0xe049790129b66a76!2sThe%20Sujata%20Stupa!5e0!3m2!1sen!2sin!4v1758434586133!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+   
+       <!-- QR + Wiki -->
+       <div class="temple-extra">
+         <img src="img/QR_Sujata.jpg" alt="QR to Wiki">
+         <a href="https://en.wikipedia.org/wiki/Sujata_Stupa" target="_blank" class="wiki-btn">
+           Go to Wikipedia <i class="bi bi-hand-index"></i>
+         </a>
+       </div>
+   
+       <div class="temple-transport">
+          <!-- Bus Stand -->
+         <div class="transport-card">
+           <h4>Nearest Bus Stand</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14490.153144435548!2d84.95730988715822!3d24.777015000000013!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32afc17856a3f%3A0x606522d9c80f4dd7!2sBus%20Stand%2C%20Sikariya%20More!5e0!3m2!1sen!2sin!4v1758075841282!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>           <div class="transport-link">
+             <i class="bi bi-bus-front"></i>
+             <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Railway Station -->
+         <div class="transport-card">
+           <h4>Nearest Railway Station</h4>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.766933146537!2d84.99679237538967!3d24.803433047537094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b90ee8bbd6b%3A0x3e4d186eb90e35cc!2sGaya%20Railway%20station!5e0!3m2!1sen!2sin!4v1758024141788!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-train-front"></i>
+             <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Airport -->
+         <div class="transport-card">
+           <h4>Nearest Airport</h4>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14493.442458227364!2d84.92467778715823!3d24.748821999999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b48bdca90af%3A0xc9139ea43080cb80!2sGaya%20International%20Airport!5e0!3m2!1sen!2sin!4v1758024175609!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-airplane"></i>
+             <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+           </div>
+         </div>
+          
+         <div class="hotel-card">
+           <h4>Best Nearest Hotel Near</h4>
+             <!-- Dropdown menu -->
+             <select onchange="updateHotelMap(this)">
+               <option value="">-------------------------------- Select Location ----------------------------</option>
+               <option value="sujata"> Stupa</option>
+               <option value="bus-sujata">Bus Stand🚌</option>
+               <option value="rail-sujata">Railway Station🚄</option>
+               <option value="airport-sujata">Airport🛬</option>
+             </select>
+           
+             <!-- One single map -->
+             <iframe class="hotel-map"
+                     src=""
+                     width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+             <!-- Dynamic Button -->
+             <div class="hotel-btn">
+               <a href="#" target="_blank">View More</a>
+             </div>
+         </div>
+     </div>
+   </section>
+
+
+
+   <!-- =================== Barabar Caves SECTION =================== -->
+   <section id="barabar-caves">
+     <h3 class="section-heading">Barabar Caves</h3>
+   
+     <!-- Flex wrapper -->
+     <div class="temple-flex-wrapper">
+   
+       <!-- Left: Temple card -->
+       <div class="temple_bx">
+         <img src="img/Barabar Caves.jpg" alt="">
+         <div class="btn_temple">
+           <button class="read-more-btn" onclick="toggleDropdown('barabar-caves-info')">
+             Read More <i class="bi bi-hand-index"></i><br>
+             <i class="bi bi-chat-fill"></i>10.2M <i class="bi bi-heart-fill"></i>5.8M
+           </button>
+   
+           <!-- Rating -->
+           <div class="temple-rating">
+             <div class="stars">
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-half"></i>
+             </div>
+             <div class="rating-text">4.4</div>
+           </div>
+   
+           <h5>Barabar Caves<br>
+             <span><i class="bi bi-wallet2"></i>$315</span>
+           </h5>
+         </div>
+       </div>
+   
+       <!-- Right: Info + Gallery -->
+       <div class="mahabodhi-right-info">
+         <h3>About Barabar Caves</h3>
+         <p>
+          Barabar Caves in Bihar are the oldest rock-cut caves in India, carved in the Mauryan era (3rd century BCE). Known for mirror-polished granite interiors and strong echo effects, they were dedicated to Ajivika ascetics with notable façades like the Lomas Rishi chaitya-arch.</p>               
+         </p>   
+         <div class="mahabodhi-gallery-table">
+           <table>
+             <tr>
+               <td><img src="img/Barabar Caves1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+               <td><img src="img/Barabar Caves2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+             </tr>
+             <tr>
+               <td><img src="img/Barabar Caves3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+               <td><img src="img/Barabar Caves4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+             </tr>
+           </table>
+         </div>
+   
+       </div>
+     </div><!-- 🔚 temple-flex-wrapper ends -->
+   
+     <!-- Hidden Dropdown -->
+     <div id="barabar-caves-info" class="temple-dropdown">
+       <div class="temple-history">
+         <h3>About</h3>
+         <p>
+         The Barabar Caves, located near Gaya, are among the oldest surviving rock-cut caves in India, dating back to the Mauryan period around the 3rd century BCE. These caves were used by Buddhist monks for meditation and gatherings, and they showcase finely polished interiors that reflect the advanced rock-cutting techniques of the time. Surrounded by scenic hills, the site offers a glimpse into India’s ancient architectural and spiritual traditions. Nearby, visitors can also explore the Nagarjuni Caves and enjoy the natural beauty of the Barabar Hills.
+         </p>
+       </div>
+   
+       <!-- Map -->
+       <div class="temple-map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.8399504398767!2d85.0607514755898!3d25.005553839435944!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2d1d370810b81%3A0xad2f3cb154678175!2sBarabar%20Caves!5e0!3m2!1sen!2sin!4v1758526419406!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+   
+       <!-- QR + Wiki -->
+       <div class="temple-extra">
+         <img src="img/QR_Barabar.png" alt="QR to Wiki">
+         <a href="https://en.wikipedia.org/wiki/Barabar_Caves" target="_blank" class="wiki-btn">
+           Go to Wikipedia <i class="bi bi-hand-index"></i>
+         </a>
+       </div>
+   
+       <div class="temple-transport">
+          <!-- Bus Stand -->
+         <div class="transport-card">
+           <h4>Nearest Bus Stand</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3609.3497127470155!2d84.98706498354478!3d25.225143573068454!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2b502c4512a11%3A0x7fc35ec015fb3553!2sBus%20Stand%2C%20JEHANABAD.!5e0!3m2!1sen!2sin!4v1758526571169!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="transport-link">
+             <i class="bi bi-bus-front"></i>
+             <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Railway Station -->
+         <div class="transport-card">
+           <h4>Nearest Railway Station</h4>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14438.811315222136!2d84.9772681!3d25.2132423!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2b5d5d70b2097%3A0x4ba890cad47a0237!2sJehanabad%20Railway%20Station!5e0!3m2!1sen!2sin!4v1758526310811!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-train-front"></i>
+             <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Airport -->
+         <div class="transport-card">
+           <h4>Nearest Helipad</h4>
+           <iframe src=""></iframe>
+           <div class="transport-link">
+             <i class="bi bi-airplane"></i>
+             <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+           </div>
+         </div>
+          
+         <div class="hotel-card">
+           <h4>Best Nearest Hotel Near</h4>
+             <!-- Dropdown menu -->
+             <select onchange="updateHotelMap(this)">
+               <option value="">-------------------------------- Select Location ----------------------------</option>
+               <option value="barabar"> Barabar Caves</option>
+               <option value="bus-barabar">Bus Stand🚌</option>
+               <option value="rail-barabar">Railway Station🚄</option>
+               <option value="airport-barabar">No Airport🛬</option>
+             </select>
+           
+             <!-- One single map -->
+             <iframe class="hotel-map"
+                     src=""
+                     width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+             <!-- Dynamic Button -->
+             <div class="hotel-btn">
+               <a href="#" target="_blank">View More</a>
+             </div>
+         </div>
+     </div>
+   </section>
+
+
+
+   <!-- =================== Rajgir Hills SECTION =================== -->
+   <section id="rajgir-hills">
+     <h3 class="section-heading">Rajgir Hills</h3>
+   
+     <!-- Flex wrapper -->
+     <div class="temple-flex-wrapper">
+   
+       <!-- Left: Temple card -->
+       <div class="temple_bx">
+         <img src="img/rajgir_hills.jpeg" alt="">
+         <div class="btn_temple">
+           <button class="read-more-btn" onclick="toggleDropdown('rajgir-hills-info')">
+             Read More <i class="bi bi-hand-index"></i><br>
+             <i class="bi bi-chat-fill"></i>22.18M <i class="bi bi-heart-fill"></i>11.3M
+           </button>
+   
+           <!-- Rating -->
+           <div class="temple-rating">
+             <div class="stars">
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-half"></i>
+             </div>
+             <div class="rating-text">4.5</div>
+           </div>
+   
+           <h5>Rajgir Hills<br>
+             <span><i class="bi bi-wallet2"></i>$200</span>
+           </h5>
+         </div>
+       </div>
+   
+       <!-- Right: Info + Gallery -->
+       <div class="mahabodhi-right-info">
+         <h3>About Rajgir Hills</h3>
+         <p>
+          Rajgir Hills, nestled in Bihar, are known for their scenic beauty, ancient caves, and spiritual significance, being associated with Lord Buddha and Mahavira.</p>              
+         </p>   
+         <div class="mahabodhi-gallery-table">
+           <table>
+             <tr>
+               <td><img src="img/Rajgir Hills1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+               <td><img src="img/Rajgir Hills2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+             </tr>
+             <tr>
+               <td><img src="img/Rajgir Hills3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+               <td><img src="img/Rajgir Hills4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+             </tr>
+           </table>
+         </div>
+   
+       </div>
+     </div><!-- 🔚 temple-flex-wrapper ends -->
+   
+     <!-- Hidden Dropdown -->
+     <div id="rajgir-hills-info" class="temple-dropdown">
+       <div class="temple-history">
+         <h3>About</h3>
+         <p>
+         Rajgir Hills, located in Nalanda district of Bihar, hold immense historical, religious, and natural significance. Surrounded by lush green valleys and hot springs, these hills were once the capital of the Magadha Empire and a favorite retreat of Lord Buddha and Lord Mahavira. Rajgir is also home to the Vishwa Shanti Stupa, ancient caves, and ropeway rides that offer breathtaking views of the hills. The combination of spirituality, history, and scenic landscapes makes Rajgir Hills a must-visit destination for both pilgrims and travelers.
+         </p>
+       </div>
+   
+       <!-- Map -->
+       <div class="temple-map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14463.782552748233!2d85.3910891572677!3d25.001963092449824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2e574826f9dad%3A0xcfae3bba8182f385!2sRajgir%20hills!5e0!3m2!1sen!2sin!4v1758528320489!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+   
+       <!-- QR + Wiki -->
+       <div class="temple-extra">
+         <img src="img/QR_RJ Hill.png" alt="QR to Wiki">
+         <a href="https://en.wikipedia.org/wiki/Rajgir_Hills" target="_blank" class="wiki-btn">
+           Go to Wikipedia <i class="bi bi-hand-index"></i>
+         </a>
+       </div>
+   
+       <div class="temple-transport">
+          <!-- Bus Stand -->
+         <div class="transport-card">
+           <h4>Nearest Bus Stand</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2422804500397!2d85.41463952559035!3d25.02585063861927!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2ef005e3f5e39%3A0x986d70983a5c2079!2sRajgir%20Bus%20stand!5e0!3m2!1sen!2sin!4v1758528499006!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="transport-link">
+             <i class="bi bi-bus-front"></i>
+             <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Railway Station -->
+         <div class="transport-card">
+           <h4>Nearest Railway Station</h4>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57843.84022584773!2d85.37601475648272!3d25.02592757374934!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2ef8d1b449423%3A0xee5fc3b15031b182!2sRajgir!5e0!3m2!1sen!2sin!4v1758528542220!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-train-front"></i>
+             <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Airport -->
+         <div class="transport-card">
+           <h4>Nearest Helipad</h4>
+           <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57843.77226408665!2d85.37601471146581!3d25.026071766530247!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2fb2fb78b04b1%3A0x5d6027e72c8b943f!2sRajgir%20Helipad!5e0!3m2!1sen!2sin!4v1758528576963!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-h-square-fill"></i>
+             <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+           </div>
+         </div>
+          
+         <div class="hotel-card">
+           <h4>Best Nearest Hotel Near</h4>
+             <!-- Dropdown menu -->
+             <select onchange="updateHotelMap(this)">
+               <option value="">-------------------------------- Select Location ----------------------------</option>
+               <option value="rajgir-hills"> Rajgir Hills</option>
+               <option value="bus-rajgir-hills">Bus Stand🚌</option>
+               <option value="rail-rajgir-hills">Railway Station🚄</option>
+               <option value="airport-rajgir-hills">Airport🛬</option>
+             </select>
+           
+             <!-- One single map -->
+             <iframe class="hotel-map"
+                     src=""
+                     width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+             <!-- Dynamic Button -->
+             <div class="hotel-btn">
+               <a href="#" target="_blank">View More</a>
+             </div>
+         </div>
+     </div>
+   </section>
+
+
+
+   <!-- =================== Gurpa Hills SECTION =================== -->
+   <section id="gurpa-hills">
+     <h3 class="section-heading">Gurpa Hills</h3>
+   
+     <!-- Flex wrapper -->
+     <div class="temple-flex-wrapper">
+   
+       <!-- Left: Temple card -->
+       <div class="temple_bx">
+         <img src="img/Gurpa Hills.jpg" alt="">
+         <div class="btn_temple">
+           <button class="read-more-btn" onclick="toggleDropdown('gurpa-hills-info')">
+             Read More <i class="bi bi-hand-index"></i><br>
+             <i class="bi bi-chat-fill"></i>500k <i class="bi bi-heart-fill"></i>200k
+           </button>
+   
+           <!-- Rating -->
+           <div class="temple-rating">
+             <div class="stars">
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-half"></i>
+             </div>
+             <div class="rating-text">4.5</div>
+           </div>
+   
+           <h5>Gurpa Hills<br>
+             <span><i class="bi bi-wallet2"></i>$200</span>
+           </h5>
+         </div>
+       </div>
+   
+       <!-- Right: Info + Gallery -->
+       <div class="mahabodhi-right-info">
+         <h3>About Gurpa Hills</h3>
+         <p>
+         Gurpa Hills near Gaya is a Buddhist pilgrimage spot where Mahākāśyapa, a disciple of Lord Buddha, is believed to have meditated. Its rocky landscape and calm surroundings attract both devotees and trekkers.
+         </p>   
+         <div class="mahabodhi-gallery-table">
+           <table>
+             <tr>
+               <td><img src="img/Gurpa Hills1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+               <td><img src="img/Gurpa Hills2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+             </tr>
+             <tr>
+               <td><img src="img/Gurpa Hills3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+               <td><img src="img/Gurpa Hills4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+             </tr>
+           </table>
+         </div>
+   
+
+       </div>
+     </div><!-- 🔚 temple-flex-wrapper ends -->
+   
+     <!-- Hidden Dropdown -->
+     <div id="gurpa-hills-info" class="temple-dropdown">
+       <div class="temple-history">
+         <h3>About</h3>
+         <p>
+        Gurpa Hills, located about 30 km from Gaya, is an important pilgrimage site deeply connected with Buddhism. According to legend, Mahākāśyapa, one of Lord Buddha’s closest disciples, chose this hill to enter deep meditation, awaiting the arrival of the future Buddha, Maitreya. The hill offers panoramic views, challenging trekking paths, and a peaceful spiritual atmosphere. Its combination of historical, religious, and natural charm makes Gurpa Hills a hidden gem for travelers seeking both adventure and tranquility.
+         </p>
+       </div>
+   
+       <!-- Map -->
+       <div class="temple-map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14463.782552748233!2d85.3910891572677!3d25.001963092449824!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2e574826f9dad%3A0xcfae3bba8182f385!2sRajgir%20hills!5e0!3m2!1sen!2sin!4v1758528320489!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+   
+       <!-- QR + Wiki -->
+       <div class="temple-extra">
+         <img src="img/QR_Gurpa.png" alt="QR to Wiki">
+         <a href="https://en.wikipedia.org/wiki/Gurpa_hill" target="_blank" class="wiki-btn">
+           Go to Wikipedia <i class="bi bi-hand-index"></i>
+         </a>
+       </div>
+   
+       <div class="temple-transport">
+          <!-- Bus Stand -->
+         <div class="transport-card">
+           <h4>Nearest Bus Stand</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.8837043170433!2d84.98527099678952!3d24.69652420000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32c5c839fae1b%3A0x421cf4f7973c15bd!2sMain%20Temple%20Stop!5e0!3m2!1sen!2sin!4v1758022557444!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="transport-link">
+             <i class="bi bi-bus-front"></i>
+             <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Railway Station -->
+         <div class="transport-card">
+           <h4>Nearest Railway Station</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.766933146537!2d84.99679237538967!3d24.803433047537094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b90ee8bbd6b%3A0x3e4d186eb90e35cc!2sGaya%20Railway%20station!5e0!3m2!1sen!2sin!4v1758024141788!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="transport-link">
+             <i class="bi bi-train-front"></i>
+             <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Airport -->
+         <div class="transport-card">
+           <h4>Nearest Helipad</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14493.442458227364!2d84.92467778715823!3d24.748821999999986!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b48bdca90af%3A0xc9139ea43080cb80!2sGaya%20International%20Airport!5e0!3m2!1sen!2sin!4v1758024175609!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-airplane"></i>
+             <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+           </div>
+         </div>
+          
+         <div class="hotel-card">
+           <h4>Best Nearest Hotel Near</h4>
+             <!-- Dropdown menu -->
+             <select onchange="updateHotelMap(this)">
+               <option value="">-------------------------------- Select Location ----------------------------</option>
+               <option value="mahabodhi"> Gurpa Hills</option>
+               <option value="bus">Bus Stand🚌</option>
+               <option value="rail">Railway Station🚄</option>
+               <option value="airport">Airport🛬</option>
+             </select>
+           
+             <!-- One single map -->
+             <iframe class="hotel-map"
+                     src=""
+                     width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+             <!-- Dynamic Button -->
+             <div class="hotel-btn">
+               <a href="#" target="_blank">View More</a>
+             </div>
+         </div>
+     </div>
+   </section>
+
+
+   <!-- =================== Kakolat Waterfall SECTION =================== -->
+   <section id="kakolat-waterfall">
+     <h3 class="section-heading">Kakolat Waterfall</h3>
+   
+     <!-- Flex wrapper -->
+     <div class="temple-flex-wrapper">
+   
+       <!-- Left: Temple card -->
+       <div class="temple_bx">
+         <img src="img/Kakolat Waterfall.jpg" alt="">
+         <div class="btn_temple">
+           <button class="read-more-btn" onclick="toggleDropdown('kakolat-waterfall-info')">
+             Read More <i class="bi bi-hand-index"></i><br>
+             <i class="bi bi-chat-fill"></i>1.1M <i class="bi bi-heart-fill"></i>836k
+           </button>
+   
+           <!-- Rating -->
+           <div class="temple-rating">
+             <div class="stars">
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star"></i>
+             </div>
+             <div class="rating-text">4.2</div>
+           </div>
+   
+           <h5>Kakolat Waterfall<br>
+             <span><i class="bi bi-wallet2"></i>$150</span>
+           </h5>
+         </div>
+       </div>
+   
+       <!-- Right: Info + Gallery -->
+       <div class="mahabodhi-right-info">
+         <h3>About Kakolat Waterfall</h3>
+         <p>
+         A 150-foot natural cascade near Nawada, surrounded by lush greenery. Its cool waters and mythological link to the Pandavas make it a popular tourist spot.</p>              
+         </p>   
+         <div class="mahabodhi-gallery-table">
+           <table>
+             <tr>
+               <td><img src="img/Kakolat Waterfall1.jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+               <td><img src="img/Kakolat Waterfall2.jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+             </tr>
+             <tr>
+               <td><img src="img/Kakolat Waterfall3.jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+               <td><img src="img/Kakolat Waterfall4.jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+             </tr>
+           </table>
+         </div>
+   
+
+       </div>
+     </div><!-- 🔚 temple-flex-wrapper ends -->
+   
+     <!-- Hidden Dropdown -->
+     <div id="kakolat-waterfall-info" class="temple-dropdown">
+       <div class="temple-history">
+         <h3>About</h3>
+         <p>
+         Kakolat Waterfall, located near Nawada in Bihar, is a stunning natural attraction cascading from a height of about 160 feet. Surrounded by lush greenery and rocky cliffs, it creates a picturesque spot for picnics, nature walks, and photography. The cool waters form a natural pool at the base, making it a favorite getaway for tourists seeking relaxation and adventure amidst nature. It is also associated with local legends, adding a touch of mythological charm to its beauty. Visiting during monsoon makes the waterfall even more mesmerizing.
+         </p>
+       </div>
+   
+       <!-- Map -->
+       <div class="temple-map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3624.793795635025!2d85.62376098344285!3d24.699614245056306!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f3a9b360f4b1c9%3A0xb20e197f59d198d2!2sKakolat%20Falls!5e0!3m2!1sen!2sin!4v1758531146888!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+   
+       <!-- QR + Wiki -->
+       <div class="temple-extra">
+         <img src="img/QR_Kakolat.png" alt="QR to Wiki">
+         <a href="https://en.wikipedia.org/wiki/Kakolat_Falls" target="_blank" class="wiki-btn">
+           Go to Wikipedia <i class="bi bi-hand-index"></i>
+         </a>
+       </div>
+   
+       <div class="temple-transport">
+          <!-- Bus Stand -->
+         <div class="transport-card">
+           <h4>Nearest Bus Stand</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d231857.39145867463!2d85.35623688835605!3d24.769014187467064!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2ff0052aaad09%3A0xe3e2fe9a71483438!2sNawada%20bus%20stand!5e0!3m2!1sen!2sin!4v1758531241254!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="transport-link">
+             <i class="bi bi-bus-front"></i>
+             <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Railway Station -->
+         <div class="transport-card">
+           <h4>Nearest Railway Station</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3619.2806691061323!2d85.54683782558682!3d24.888406244138373!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f2ff0061468ccf%3A0x89f8772b0d8e1fa3!2sNawada%20Railway%20Station!5e0!3m2!1sen!2sin!4v1758531271954!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="transport-link">
+             <i class="bi bi-train-front"></i>
+             <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Airport -->
+         <div class="transport-card">
+           <h4>Nearest Helipad</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7384366.707933894!2d77.47918307827362!3d25.349596720097992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39f32b48bdca90af%3A0xc9139ea43080cb80!2sGaya%20International%20Airport!5e0!3m2!1sen!2sin!4v1758531370731!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-airplane"></i>
+             <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+           </div>
+         </div>
+          
+         <div class="hotel-card">
+           <h4>Best Nearest Hotel Near</h4>
+             <!-- Dropdown menu -->
+             <select onchange="updateHotelMap(this)">
+               <option value="">-------------------------------- Select Location ----------------------------</option>
+               <option value="kakolat"> Kakolat Waterfall</option>
+               <option value="bus-kakolat">Bus Stand🚌</option>
+               <option value="rail-kakolat">Railway Station🚄</option>
+               <option value="airport">Airport🛬</option>
+             </select>
+           
+             <!-- One single map -->
+             <iframe class="hotel-map"
+                     src=""
+                     width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+             <!-- Dynamic Button -->
+             <div class="hotel-btn">
+               <a href="#" target="_blank">View More</a>
+             </div>
+         </div>
+     </div>
+   </section>
+
+
+  
+   <!-- =================== Telhar Kund SECTION =================== -->
+   <section id="telhar-kund">
+     <h3 class="section-heading">Telhar Kund</h3>
+   
+     <!-- Flex wrapper -->
+     <div class="temple-flex-wrapper">
+   
+       <!-- Left: Temple card -->
+       <div class="temple_bx">
+         <img src="img/Telahr kund .jpg" alt="">
+         <div class="btn_temple">
+           <button class="read-more-btn" onclick="toggleDropdown('telhar-kund-info')">
+             Read More <i class="bi bi-hand-index"></i><br>
+             <i class="bi bi-chat-fill"></i>2.1M <i class="bi bi-heart-fill"></i>1.34M
+           </button>
+   
+           <!-- Rating -->
+           <div class="temple-rating">
+             <div class="stars">
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star-fill"></i>
+               <i class="bi bi-star"></i>
+             </div>
+             <div class="rating-text">4.2</div>
+           </div>
+   
+           <h5>Telhar Kund<br>
+             <span><i class="bi bi-wallet2"></i>$250</span>
+           </h5>
+         </div>
+       </div>
+   
+       <!-- Right: Info + Gallery -->
+       <div class="mahabodhi-right-info">
+         <h3>About Telhar Kund</h3>
+         <p>
+         A 150-foot natural cascade near Nawada, surrounded by lush greenery. Its cool waters and mythological link to the Pandavas make it a popular tourist spot.</p>              
+         </p>   
+         <div class="mahabodhi-gallery-table">
+           <table>
+             <tr>
+               <td><img src="img/Telahr kund1 .jpg" class="gallery-zoom" alt="Mahabodhi 1"></td>
+               <td><img src="img/Telahr kund2 .jpg" class="gallery-zoom" alt="Mahabodhi 2"></td>
+             </tr>
+             <tr>
+               <td><img src="img/Telahr kund3 .jpg" class="gallery-zoom" alt="Mahabodhi 3"></td>
+               <td><img src="img/Telahr kund4 .jpg" class="gallery-zoom" alt="Mahabodhi 4"></td>
+             </tr>
+           </table>
+         </div>
+   
+
+       </div>
+     </div><!-- 🔚 temple-flex-wrapper ends -->
+   
+     <!-- Hidden Dropdown -->
+     <div id="telhar-kund-info" class="temple-dropdown">
+       <div class="temple-history">
+         <h3>About</h3>
+         <p>
+         Telhar Kund, located near Sasaram in Bihar, is a scenic waterfall known for its crystal-clear water and serene surroundings. Nestled amidst the Kaimur hills, it flows into the Durgavati River and is surrounded by lush greenery and rocky cliffs. The calm atmosphere and natural beauty make it a perfect spot for nature lovers and travelers looking for peace away from the city.
+         </p>
+       </div>
+   
+       <!-- Map -->
+       <div class="temple-map">
+         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3620.9067043950718!2d83.52735227558536!3d24.83286394636101!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398e7eeae44099ff%3A0x698b55d2400443b1!2sTelhar%20Kund!5e0!3m2!1sen!2sin!4v1758532342225!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+       </div>
+   
+       <!-- QR + Wiki -->
+       <div class="temple-extra">
+         <img src="img/QR_Telhar.png" alt="QR to Wiki">
+         <a href="https://en.wikipedia.org/wiki/Telhar" target="_blank" class="wiki-btn">
+           Go to Wikipedia <i class="bi bi-hand-index"></i>
+         </a>
+       </div>
+   
+       <div class="temple-transport">
+          <!-- Bus Stand -->
+         <div class="transport-card">
+           <h4>Nearest Bus Stand</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1808.7054121464016!2d83.97895239839474!3d24.952133500000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398db7e0a67eb23d%3A0x96571cca5afbae74!2sBus%20Stand%20Sasaram!5e0!3m2!1sen!2sin!4v1758532395114!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="transport-link">
+             <i class="bi bi-bus-front"></i>
+             <a href="https://www.redbus.in/" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Railway Station -->
+         <div class="transport-card">
+           <h4>Nearest Railway Station</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3617.3593672083502!2d84.0094156834919!3d24.953885084465576!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398db7002512c6f7%3A0xc16b665184c76688!2sSasaram%20Railway%20Station!5e0!3m2!1sen!2sin!4v1758532417068!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="transport-link">
+             <i class="bi bi-train-front"></i>
+             <a href="https://www.irctc.co.in/nget/train-search" target="_blank">Book Now</a>
+           </div>
+         </div>
+          <!-- Airport -->
+         <div class="transport-card">
+           <h4>Nearest Airport</h4>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d57891.12639864214!2d84.05357924863281!3d24.92541249999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x398daf87d3bbb189%3A0x61a494e49b5c7ff2!2sSasaram%20Airstrip!5e0!3m2!1sen!2sin!4v1758077975348!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+           <div class="transport-link">
+             <i class="bi bi-airplane"></i>
+             <a href="https://www.expedia.com/Flights" target="_blank">Book Now</a>
+           </div>
+         </div>
+          
+         <div class="hotel-card">
+           <h4>Best Nearest Hotel Near</h4>
+             <!-- Dropdown menu -->
+             <select onchange="updateHotelMap(this)">
+               <option value="">-------------------------------- Select Location ----------------------------</option>
+               <option value="sher"> Telhar Kund</option>
+               <option value="bus-sher">Bus Stand🚌</option>
+               <option value="rail-sher">Railway Station🚄</option>
+               <option value="airport-sher">Airport🛬</option>
+             </select>
+           
+             <!-- One single map -->
+             <iframe class="hotel-map"
+                     src=""
+                     width="100%" height="250" style="border:0; margin-top:10px;" allowfullscreen="" loading="lazy"></iframe>
+             <!-- Dynamic Button -->
+             <div class="hotel-btn">
+               <a href="#" target="_blank">View More</a>
+             </div>
+         </div>
+     </div>
+   </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  <script src="app.js"></script>
+   
+
+
+
+
+
+
+
+ <div id="loading-overlay">
+   <div class="water-effect">
+     <img src="img/Logo6.jpg" alt="Loading..." />
+   </div>
+ </div>
+ 
+ <style>
+   /* Full screen overlay */
+   #loading-overlay {
+     position: fixed;
+     top: 0; left: 0; right: 0; bottom: 0;
+     background: rgba(0, 0, 0, 0.5);
+     display: none; /* hidden initially */
+     justify-content: center;
+     align-items: center;
+     z-index: 9999;
+     margin: auto;
+  }
+ 
+ </style>
+ 
+ <script>
+   // Select all external links where overlay effect applies
+   document.querySelectorAll('a').forEach(link => {
+     link.addEventListener('click', event => {
+       const href = link.getAttribute('href');
+       // Only trigger if link is external or desired
+       if(href && href.startsWith('http')) {
+         event.preventDefault(); // stop immediate navigation
+         document.getElementById('loading-overlay').style.display = 'flex';
+         // simulate delay then navigate
+         setTimeout(() => {
+           window.location.href = href;
+         }, 2000); // 2 seconds for demo
+       }
+     });
+   });
+ </script>
+
+
+
+
+ <script>
+ function toggleDropdown(id) {
+   const dropdown = document.getElementById(id);
+   dropdown.classList.toggle("active");
+ }
+ </script>
+
+
+ 
+ <script>
+   const searchInput = document.getElementById("templeSearch");
+   const sections = document.querySelectorAll(".temple-section");
+ 
+   searchInput.addEventListener("input", () => {
+     const query = searchInput.value.toLowerCase().trim();
+ 
+     if (query === "") {
+       // If input is empty, show all sections
+       sections.forEach(section => section.classList.remove("hidden"));
+     } else {
+       // Show only matching section(s)
+       sections.forEach(section => {
+         const name = section.getAttribute("data-name").toLowerCase();
+         if (name.includes(query)) {
+           section.classList.remove("hidden");
+         } else {
+           section.classList.add("hidden");
+         }
+       });
+     }
+   });
+ </script>
+
+
+</body>
+</html>
+

@@ -1,0 +1,827 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    font-family: "Poppins", sans-serif;
+}
+
+.sections {
+    padding: 80px 20px;   /* space inside */
+       /* space inside */
+   /* each section covers screen height */
+  border-bottom: 1px solid #ddd;  /* light separator line */
+  background: #f9f9f9; /* light background for clarity */
+}
+
+
+
+
+.sections .temples section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+.sections .history section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+.sections .hills section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+.sections .falls section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    color: white;
+    border-radius: 10px;
+}
+
+.sections .temples section h2{
+    background: white;
+    color: black;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: none;
+}
+.sections .history section h2{
+    background: white;
+    color: black;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: none;
+}
+.sections .hills section h2{
+    background: white;
+    color: black;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: none;
+}
+.sections .falls section h2{
+    background: white;
+    color: black;
+    margin-left: 10px;
+    border-radius: 8px;
+    border: none;
+}
+
+
+
+
+.sections .temple_bx{
+    width: 95%;
+    height: auto;
+    margin-top: 20px;
+    /* border: 1px solid black; */
+    align-items: center;
+    border: 0;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+
+
+.sections .temple_bx{
+
+    height: 20%;
+    border: 0;
+    /* border: 1px solid black; */
+}
+.sections .temple_bx h3{
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 700;
+    margin-left: 40;
+}
+.sections .temple_bx img{
+    height: 90%;
+    border-radius: 20px;
+    width: 75%;
+    justify-content: space-between;
+    height: 25%;
+    margin-top: 10px;
+}
+.sections .temple_bx .btn_temple{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 29%;
+    
+}
+.sections .temple_bx .btn_temple a{
+    text-decoration: none;
+    background: black;
+    color: white;
+    border-radius: 20px;
+    padding: 6px 20px;
+    font-size: 15px;
+    transition: .3s linear;
+    
+}
+.sections .temple_bx .btn_temple a:hover{
+    background: gray;
+}
+.sections .temple_bx .btn_temple h5{
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 10px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    
+}
+.sections .temple_bx .btn_temple span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+
+
+
+
+.temple-flex-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+  margin: 15px 0 0 30px; /* Adjust as needed */
+}
+
+.temple_bx {
+  flex: 1;
+}
+
+.mahabodhi-right-info {
+  flex: 1;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 14px rgba(0,0,0,0.08);
+  padding: 22px 30px 24px 30px;
+  min-width: 420px;
+  max-width: 520px;
+  margin-top: 2%;
+  height: 400px;
+}
+
+.mahabodhi-gallery-table table {
+  width: 100%;
+  border-spacing: 8px;
+}
+
+.gallery-zoom {
+  width: 120px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s cubic-bezier(.36,1.21,.32,1), box-shadow 0.3s;
+}
+
+.gallery-zoom:hover {
+  transform: scale(2.3) translateY(-16px);
+  z-index: 99;
+  position: relative;
+  box-shadow: 0 10px 22px rgba(0,0,0,0.23);
+}
+
+@media (max-width: 900px) {
+  .temple-flex-wrapper {
+    flex-direction: column;
+    gap: 24px;
+  }
+  .mahabodhi-right-info {
+    min-width: 0;
+    max-width: 100%;
+    margin-top: 12px;
+  }
+}
+
+.section-heading {
+  text-align: center;  /* Center heading */
+  font-size: 40px;
+  margin-bottom: 30px; /* Space below heading */
+  font-weight: 900;
+}
+.temple-flex-wrapper {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start;
+}
+
+
+
+.temple-flex-wrapper {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  position: relative;
+}
+
+.temple-flex-wrapper::before {
+  content: "";
+  position: absolute;
+  left: 52%; /* Adjust if needed */
+  top: 0;
+  bottom: 0;
+  width: 1.5px;
+  background: #ddd; /* Light grey line */
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+
+
+
+header .content .cont_bx {
+  margin-top: 80px;  /* ✅ pushes heading below navbar */
+}
+
+
+/*Making The sections bg transparent*/
+.sections {
+  padding: 80px 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.1); /* softer line */
+  background: rgba(255, 255, 255, 0.2); /* semi-transparent */
+  backdrop-filter: blur(6px);          /* glass effect */
+}
+
+.sections .temples section,
+.sections .history section,
+.sections .hills section,
+.sections .falls section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0,0,0,0.5); /* transparent black */
+  backdrop-filter: blur(4px);  /* smooth glass look */
+  color: white;
+  border-radius: 10px;
+}
+
+
+
+
+/*Drop Down*/
+
+/*Mahabodhi Temple*/
+.hidden { display: none; }
+
+.temple-flex {
+  display: flex;
+  gap: 20px;
+}
+
+.temple-map iframe {
+  border-radius: 10px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.temple-history { flex: 1; }
+
+.temple-extra {
+  margin-top: 15px;
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.wiki-btn {
+  padding: 10px 15px;
+  background: #0077ff;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* smooth dropdown animation */
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+
+
+/* Flex layout */
+.temple-flex-wrapper {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+}
+
+.temple_bx img {
+  width: 250px;
+  border-radius: 8px;
+}
+
+.btn_temple {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.read-more-btn {
+  background: black;
+  color: #fff;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.read-more-btn:hover {
+  background: gray;
+}
+
+/* Dropdown hidden by default */
+
+
+
+
+
+.temple-dropdown {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.6s ease, opacity 0.5s ease;
+  opacity: 0;                  /* invisible by default */
+  background: rgba(255, 255, 255, 0.1); /* transparent white tint */
+  border-radius: 8px;
+  padding: 0 15px;
+}
+
+/* When active (open) */
+.temple-dropdown.active {
+  max-height: 1000px;   /* enough space for content */
+  opacity: 1;           /* fade in */
+  padding: 15px;
+}
+
+
+.dropdown-flex {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.map-box {
+  flex: 2; /* Map takes more space */
+}
+
+.qr-box {
+  flex: 1;
+  text-align: center;
+}
+
+.wiki-btn {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.wiki-btn:hover {
+  background: gray;
+}
+
+
+
+
+/*Styling The Heading*/
+.temple-history h3 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+  margin-bottom: 15px;
+  position: relative;
+  padding-bottom: 8px;
+}
+
+/* underline effect */
+.temple-history h3::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0077ff, #00c6ff);
+  border-radius: 2px;
+}
+
+/*glow effect */
+.temple-history h3:hover {
+  color: blue;
+  text-shadow: 0 0 8px rgba(0, 119, 255, 0.4);
+  transition: 0.3s;
+}
+
+
+
+.temple-extra {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* Make the Wiki button align nicely */
+.temple-extra .wiki-btn {
+  margin-right: 35%;
+  padding: 8px 14px;
+  background-color: black;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: 0.3s;
+}
+
+.temple-extra .wiki-btn:hover {
+  background-color: gray;
+}
+
+
+
+
+.temple-history p {
+  background: rgba(255, 255, 255, 0.8); /* white-ish background */
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* subtle shadow */
+  line-height: 1.6;
+}
+
+
+
+
+
+
+
+.temple-dropdown.hidden {
+  display: none !important;
+}
+
+
+
+
+
+
+
+
+
+
+.temple-dropdown {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  background: rgba(240, 240, 240, 0.95);
+  border-radius: 10px;
+  flex-wrap: wrap; /* responsive on smaller screens */
+}
+
+/* Left: History */
+.temple-history {
+  flex: 1;
+  min-width: 250px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+/* Right: Map + QR + Transport */
+.temple-right-side {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+/* Map iframe */
+.temple-map iframe {
+  width: 200%;
+  height: 350px;
+  border-radius: 8px;
+}
+
+/* QR + Wiki */
+.temple-extra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.temple-extra img {
+  width: 120px;
+  height: 120px;
+}
+
+.temple-extra a {
+  margin-top: 5px;
+  text-decoration: none;
+  color: #3498db;
+}
+
+/* Transport Cards */
+.temple-transport {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: flex-start; /* make cards stick to left of right container */
+}
+
+.transport-card {
+  flex: 1 1 120px;
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.transport-card iframe {
+  width: 100%;
+  height: 100px;
+  border-radius: 5px;
+}
+
+.transport-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+
+.transport-link i {
+  font-size: 18px;
+  color: #3498db;
+}
+
+.transport-link a {
+  text-decoration: none;
+  color: #3498db;
+  font-size: 14px;
+}
+
+
+
+
+
+/* Enlarge transport iframes */
+.temple-transport .transport-card iframe {
+    width: 100%;       /* full width of the transport card */
+    max-width: 400px;  /* you can increase this as needed */
+    height: 250px;     /* increase height */
+    border: 0;
+    border-radius: 8px;
+}
+
+
+
+
+/* Ensure dropdown is relative */
+.temple-dropdown {
+    position: relative;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden; /* prevent overflow of absolute elements */
+}
+
+
+
+/* Ensure dropdown is relative */
+.temple-dropdown {
+    position: relative;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    overflow: hidden; /* prevent overflow of absolute elements */
+}
+
+
+
+.temple-dropdown .temple-extra img {
+    width: 300px; 
+    height: 300px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin-right: 40%;
+}
+
+
+
+
+/* History section */
+.temple-dropdown .temple-history {
+    
+    min-width: 500px;     /* prevents too small */
+    max-width: 800px;     /* optional limit */
+    background: rgba(255, 255, 255, 0.8); /* white-ish block */
+    padding: 15px;
+    border-radius: 8px;
+}
+
+
+
+/* Rating */
+.temple-rating {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.temple-rating .stars i {
+    color: orange; /* orange stars */
+    font-size: 18px;
+    margin-right: 2px;
+}
+
+.temple-rating .rating-text {
+    background-color: blue;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 14px;
+    color: white;
+}
+
+
+/*Transparent Border*/
+/* Apply to any section wrapper */
+
+.temple-dropdown
+ {
+  border: 2px solid rgba(255, 255, 255, 0.3); /* semi-transparent white border */
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.1); /* translucent background */
+  backdrop-filter: blur(10px); /* frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* subtle shadow */
+  padding: 20px;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+
+
+/* Shrink only Sher Shah Suri Tomb transport cards */
+#sher-shah-suri-tomb-info .temple-transport .transport-card {
+    width: 300px; /* adjust as needed */
+    max-width: 300px;
+    min-width: 250px; /* optional */
+}
+
+
+
+/* Position QR code to top right inside temple-dropdown */
+.temple-dropdown .temple-extra {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.temple-dropdown .temple-extra img {
+    width: 120px;
+    height: 120px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    margin: 0;
+}
+
+.temple-dropdown .temple-extra .wiki-btn {
+    margin: 0;
+    padding: 6px 12px;
+    background: black;
+    color: white;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 13px;
+}
+.temple-dropdown .temple-extra .wiki-btn:hover {
+    background: gray;
+}
+
+.temple-dropdown.temple-transport {
+    display: block;      
+    width: 100%;
+    height: 350px;       
+    border: 0;
+    border-radius: 8px;
+    margin: 0;           
+}
+
+
+.transport-card {
+    padding: 10px; /* optional */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px; /* spacing between iframe and buttons */
+}
+
+
+
+.hotel-card {
+  flex: 1 1 290px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+
+  flex-direction: column;
+  gap: 12px;
+
+ 
+}
+
+.hotel-card h4 {
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+/* Dropdown menu */
+.hotel-card select {
+  padding: 8px 10px;
+  font-size: 15px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: 0.3s;
+  cursor: pointer;
+  background: #fafafa;
+  width: 100%;
+}
+
+.hotel-card select:hover {
+  border-color: #0077ff;
+  box-shadow: 0 0 5px rgba(0, 119, 255, 0.3);
+}
+
+/* Map iframe */
+.hotel-map iframe {
+  flex: 1;
+  width: 100%;
+  height: 220px;
+  border: 0;
+  border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+/*View MOre of Hotels*/
+.hotel-btn a {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+.hotel-btn a:hover {
+  background: linear-gradient(135deg, #feb47b, #ff7e5f);
+  transform: translateY(-3px) scale(1.05);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
+}
+
+
+
+
+
+
