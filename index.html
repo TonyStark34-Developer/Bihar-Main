@@ -1881,43 +1881,48 @@
 
 
  <div id="loading-overlay">
-   <div class="water-effect">
-     <img src="img/Logo6.jpg" alt="Loading..." />
-   </div>
- </div>
- 
- <style>
-   /* Full screen overlay */
-   #loading-overlay {
-     position: fixed;
-     top: 0; left: 0; right: 0; bottom: 0;
-     background: rgba(0, 0, 0, 0.5);
-     display: none; /* hidden initially */
-     justify-content: center;
-     align-items: center;
-     z-index: 9999;
-     margin: auto;
+  <div class="water-effect">
+    <img src="img/Logo6.jpg" alt="Loading..." />
+  </div>
+</div>
+
+<style>
+  #loading-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
   }
- 
- </style>
- 
- <script>
-   // Select all external links where overlay effect applies
-   document.querySelectorAll('a').forEach(link => {
-     link.addEventListener('click', event => {
-       const href = link.getAttribute('href');
-       // Only trigger if link is external or desired
-       if(href && href.startsWith('http')) {
-         event.preventDefault(); // stop immediate navigation
-         document.getElementById('loading-overlay').style.display = 'flex';
-         // simulate delay then navigate
-         setTimeout(() => {
-           window.location.href = href;
-         }, 2000); // 2 seconds for demo
-       }
-     });
-   });
- </script>
+
+  #loading-overlay img {
+    width: 120px;
+    height: auto;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    document.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", event => {
+        const href = link.getAttribute("href");
+        
+        // Ignore anchors like #section or javascript:void(0)
+        if (!href || href.startsWith("#") || href.startsWith("javascript:")) return;
+
+        event.preventDefault();
+        document.getElementById("loading-overlay").style.display = "flex";
+
+        setTimeout(() => {
+          window.location.href = href;
+        }, 2000);
+      });
+    });
+  });
+</script>
+
 
 
 
@@ -1958,6 +1963,7 @@
 
 </body>
 </html>
+
 
 
 
